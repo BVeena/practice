@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React</title>
+  </head>
+  <body>
+   <div id = "root"></div>
+
+   <script type="text/babel">
+    function Header(){
+        return(
+            <header>
+                <h1>✋Welcome To React World🤚</h1>
+            </header>
+        )
+    }
+    function Main(){
+        return(
+            <p>
+                Every component has it's own properties. By adding props element we will get the properties for components.
+            </p>
+        );
+    }
+    function Footer(props){
+        return(
+            <footer>
+                <p>Today👉 {props.date}</p>
+            </footer>
+        );
+    }
+    function App(){
+        return(
+           <div>
+            <Header/>
+            <Main/>
+            <Footer
+             date ={new Date().toLocaleDateString()}/>
+            </div>
+        );
+    }
+    ReactDOM.render(
+        <App/>,
+        document.getElementById("root")
+    )
+   </script>
+    
+  </body>
+</html>

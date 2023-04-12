@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>My Form</h1>
+    <form id="my-form">
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="signin">Sign In:</label>
+        <input type="radio" id="signin" name="action" value="signin" checked>
+      </div>
+      <div class="form-group">
+        <label for="login">Login:</label>
+        <input type="radio" id="login" name="action" value="login">
+      </div>
+      <button type="submit" id="submit-button">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
